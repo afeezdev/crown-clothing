@@ -10,7 +10,12 @@ body {
 
 }
 
-code {
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+}  */
