@@ -1,17 +1,19 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
+import collectionComponent from '../pages/collection/collection.component';
+
 
 
 const config = {
-    apiKey: "AIzaSyAK01u1KUjVrG1068XNHhRi65vNi8QaoZI",
-    authDomain: "crown-clothing2.firebaseapp.com",
-    databaseURL: "https://crown-clothing2.firebaseio.com",
-    projectId: "crown-clothing2",
-    storageBucket: "crown-clothing2.appspot.com",
-    messagingSenderId: "973195281402",
-    appId: "1:973195281402:web:7ccbbe11e775841cf85a43",
-    measurementId: "G-WRR780TR9E"
+    apiKey: "AIzaSyBaNRohCRTPv4af9tDY2TMgagq650tssms",
+    authDomain: "clothes-site.firebaseapp.com",
+    databaseURL: "https://clothes-site.firebaseio.com",
+    projectId: "clothes-site",
+    storageBucket: "clothes-site.appspot.com",
+    messagingSenderId: "244009107687",
+    appId: "1:244009107687:web:7a6c35342bab6e98cca242",
+    measurementId: "G-J3FEN5GLHG"
 };
 
 firebase.initializeApp(config);
@@ -44,7 +46,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 
 export const addCollectionAndDocuments = async (collectionKey, objectToAdd) => {
     const collectionRef = firestore.collection(collectionKey);
-    
+    console.log(collectionRef)
     const batch = firestore.batch();
     objectToAdd.forEach(obj => {
         const newDocRef = collectionRef.doc();
