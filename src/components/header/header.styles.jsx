@@ -6,8 +6,13 @@ export const HeaderContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: purple;
+  background-image: url('https://www.circularonline.co.uk/wp-content/uploads/2019/12/scap.png');
+  background-repeat: repeat-x;
 
+  
   @media screen and (max-width: 800px) {
     height: 60px;
     padding: 10px;
@@ -32,6 +37,7 @@ export const OptionsContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    
 
     @media screen and (max-width: 800px) {
       width: 80%;
@@ -41,4 +47,5 @@ export const OptionsContainer = styled.div`
 export const OptionLink = styled(Link)`
     padding: 10px 15px;
     cursor: pointer;
+    color: purple;
 `;
