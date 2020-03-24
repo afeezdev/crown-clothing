@@ -64,10 +64,10 @@ class SignUp extends React.Component {
                 <form className='sign-up-form' onSubmit={this.handleSubmit}>
                     <FormInput
                         type='text'
-                        name='displayName'
+                        name='name'
                         value={displayName}
                         onChange={this.handleChange}
-                        label='Dispaly Name'
+                        label='Name'
                         required
                     />
                     <FormInput
