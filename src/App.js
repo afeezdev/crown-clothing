@@ -15,7 +15,7 @@ import ContactPage from './pages/contactPage/contactPage.component';
 import { GlobalStyle } from './global.styles';
 
 import { auth, createUserProfileDocument, addCollectionAndDocuments } from './firebase/firebase.utils';
-//import { selectCollectionsForPreview } from './redux/shop/shop.selector';
+// import { selectCollectionsForPreview } from './redux/shop/shop.selector';
 
 import { setCurrentUser } from './redux/user/user.action'; 
 import { selectCurrentUser } from './redux/user/user.selector';
@@ -42,7 +42,7 @@ class App extends Component {
       } 
       
         setCurrentUser(userAuth);
-        //addCollectionAndDocuments('collections', collectionsArray.map(({title, items})=> ({title, items})))
+      // addCollectionAndDocuments('collections', collectionsArray.map(({ title, items, linkUrl})=> ({title, items, linkUrl})))
     });
   }
 
