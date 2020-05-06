@@ -11,7 +11,6 @@ const CollectionPreview = ({ title, items, history, match, linkUrl }) => (
     <h1
       className="title"
       onClick={() => {
-        console.log(title)
         history.push(`${match.url}${linkUrl}`)
       }}
     >
