@@ -8,20 +8,22 @@
 
 const onToken = token => {
   axios({
-    url: 'payment',
-    method: 'post',
+    url: "http://localhost:5000/payment",
+    method: "post",
     data: {
       amount: priceForStripe,
-      token
-    }
-  }).then(response => {
-    alert('Payment successful')
-  }).catch(error => {
-    console.log('Payment error: ', error);
-    alert(
-      'There was an issue with your payment. Please make sure you use the provided card'
-    )
+      token,
+    },
   })
+    .then((response) => {
+      alert("Payment successful");
+    })
+    .catch((error) => {
+      console.log("Payment error: ", error);
+      alert(
+        "There was an issue with your payment. Please make sure you use the provided card"
+      );
+    });
 };
 
 // using fetch
