@@ -2,8 +2,12 @@
   height: 70px;
   width: 100%;
   display: flex;
+  position: fixed;
   justify-content: space-between;
   margin-bottom: 25px;
+  z-index: 1;
+  border: solid;
+  padding-bottom: 5em;
 
   
 
