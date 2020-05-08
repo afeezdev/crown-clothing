@@ -8,8 +8,8 @@
 
 const onToken = token => {
   axios({
-    url: "http://localhost:5000/payment",
-    method: "post",
+    url: 'http://localhost:5000/payment',
+    method: 'post',
     data: {
       amount: priceForStripe,
       token,
