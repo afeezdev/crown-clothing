@@ -19,6 +19,15 @@ class SignUp extends React.Component {
         }
     }
 
+    componentWillMount () {
+        this.setState({
+            displayName: '',
+            email: '',
+            password: '',
+            confirmPassword: ''
+        })
+    }
+
     handleSubmit = async event => {
         event.preventDefault();
 

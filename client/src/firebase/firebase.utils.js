@@ -4,14 +4,14 @@ import 'firebase/auth';
 import collectionComponent from '../pages/collection/collection.component';
 
 const config = {
-  apiKey: "AIzaSyDKFDYfXx8EXwk4-PJIlnjbOFEZHhvxFnE",
-  authDomain: "crown-clothes-7392e.firebaseapp.com",
-  databaseURL: "https://crown-clothes-7392e.firebaseio.com",
-  projectId: "crown-clothes-7392e",
-  storageBucket: "crown-clothes-7392e.appspot.com",
-  messagingSenderId: "14418103118",
-  appId: "1:14418103118:web:77352f26a2e1fa6eb6ac1f",
-  measurementId: "G-ES0Z46HPK4",
+    apiKey: "AIzaSyDlIaJGyq6PFhngpjeSiecYBBgpXMwkW6A",
+    authDomain: "e-commerce-clothes.firebaseapp.com",
+    databaseURL: "https://e-commerce-clothes.firebaseio.com",
+    projectId: "e-commerce-clothes",
+    storageBucket: "e-commerce-clothes.appspot.com",
+    messagingSenderId: "246095563380",
+    appId: "1:246095563380:web:51b7b3c710828742bcdf21",
+    measurementId: "G-PH33VZGSPC"
 };
 
 
