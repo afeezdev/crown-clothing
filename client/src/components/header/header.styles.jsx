@@ -15,12 +15,13 @@ export const HeaderContainer = styled.div`
   color: purple;
   background-image: url('https://www.circularonline.co.uk/wp-content/uploads/2019/12/scap.png');
   background-repeat: repeat-x;
+  
 
   
   @media screen and (max-width: 800px) {
     height: 60px;
     padding: 10px;
-    margin-buttom: 20px;
+    margin-bottom: 50px;
   }
 `;
 
