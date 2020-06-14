@@ -14,7 +14,11 @@ import ContactPage from './pages/contactPage/contactPage.component';
 
 import { GlobalStyle } from './global.styles';
 
-import { auth, createUserProfileDocument, addCollectionAndDocuments } from './firebase/firebase.utils';
+import { 
+  auth, 
+  createUserProfileDocument,
+  // addCollectionAndDocuments 
+  } from './firebase/firebase.utils';
 // import { selectCollectionsForPreview } from './redux/shop/shop.selector';
 
 import { setCurrentUser } from './redux/user/user.action'; 
@@ -26,7 +30,9 @@ class App extends Component {
 
 
   componentDidMount() {
-    const { setCurrentUser, collectionsArray } = this.props; 
+    const { setCurrentUser,
+      //  collectionsArray 
+      } = this.props; 
 
     this.unsubScribeFromAuth = auth.onAuthStateChanged(async userAuth=> {
       if (userAuth) {

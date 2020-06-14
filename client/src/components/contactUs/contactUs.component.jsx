@@ -12,7 +12,7 @@ const ContactUs = () => (
     <div className="contact-us-component">
         <div className="contact-us">
             <div style = {phoneStyle}>
-                &#128222;
+                <span role="img" aria-label="phone"> &#128222;</span>
             </div>
             <h4>Talk to Sales</h4> <br/>
             <div>Just pick up the number to chat with the developer</div>    

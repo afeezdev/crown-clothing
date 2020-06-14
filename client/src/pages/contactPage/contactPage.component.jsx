@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CustomerSupport from '../../components/customerSupport/customerSupport.component';
+//import CustomerSupport from '../../components/customerSupport/customerSupport.component';
 import ContactUs from '../../components/contactUs/contactUs.component';
 
 import './contactPage.styles.scss';

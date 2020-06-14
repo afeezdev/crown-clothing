@@ -1,7 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-import collectionComponent from '../pages/collection/collection.component';
+// import collectionComponent from '../pages/collection/collection.component';
 
 const config = {
     apiKey: "AIzaSyDlIaJGyq6PFhngpjeSiecYBBgpXMwkW6A",
