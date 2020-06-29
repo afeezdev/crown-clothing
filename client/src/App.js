@@ -19,7 +19,8 @@ import {
   createUserProfileDocument,
   // addCollectionAndDocuments 
   } from './firebase/firebase.utils';
-// import { selectCollectionsForPreview } from './redux/shop/shop.selector';
+
+import { selectCollectionsForPreview } from './redux/shop/shop.selector';
 
 import { setCurrentUser } from './redux/user/user.action'; 
 import { selectCurrentUser } from './redux/user/user.selector';
@@ -43,7 +44,7 @@ class App extends Component {
               id: snapShot.id,
               ...snapShot.data()
           });
-         // console.log(snapShot.data())
+         console.log(snapShot.data())
         });
       } 
       
@@ -87,7 +88,7 @@ class App extends Component {
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
- // collectionsArray: selectCollectionsForPreview
+ collectionsArray: selectCollectionsForPreview
 
 })
 
