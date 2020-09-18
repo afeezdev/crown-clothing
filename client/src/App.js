@@ -25,6 +25,8 @@ import { selectCollectionsForPreview } from './redux/shop/shop.selector';
 import { setCurrentUser } from './redux/user/user.action'; 
 import { selectCurrentUser } from './redux/user/user.selector';
 
+import './App.scss'
+
 class App extends Component {
   
   unsubScribeFromAuth = null;
