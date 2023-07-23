@@ -26,10 +26,15 @@ const firebaseConfig = {
   projectId: "crownclothing-5ad24",
   storageBucket: "crownclothing-5ad24.appspot.com",
   messagingSenderId: "602689257270",
-  appId: "1:602689257270:web:c341a7f5e980e6a96a3d97"
+  appId: "1:602689257270:web:c341a7f5e980e6a96a3d97",
+  // apiKey: 'AIzaSyDDU4V-_QV3M8GyhC9SVieRTDM4dbiT0Yk',
+  // authDomain: 'crwn-clothing-db-98d4d.firebaseapp.com',
+  // projectId: 'crwn-clothing-db-98d4d',
+  // storageBucket: 'crwn-clothing-db-98d4d.appspot.com',
+  // messagingSenderId: '626766232035',
+  // appId: '1:626766232035:web:506621582dab103a4d08d6',
 };
 
-// Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
 
 const googleProvider = new GoogleAuthProvider();
@@ -64,11 +69,17 @@ export const addCollectionAndDocuments = async (
 };
 
 export const getCategoriesAndDocuments = async () => {
-  const collectionRef = collection(db, 'categories');
+  const collectionRef = collection(db, 'collections');
   const q = query(collectionRef);
 
   const querySnapshot = await getDocs(q);
-  return querySnapshot.docs.map((docSnapshot) => docSnapshot.data());
+  const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
+    const { title, items } = docSnapshot.data();
+    acc[title.toLowerCase()] = items;
+    return acc;
+  }, {});
+
+  return categoryMap;
 };
 
 export const createUserDocumentFromAuth = async (
@@ -96,7 +107,7 @@ export const createUserDocumentFromAuth = async (
       console.log('error creating the user', error.message);
     }
   }
- 
+
   return userDocRef;
 };
 
