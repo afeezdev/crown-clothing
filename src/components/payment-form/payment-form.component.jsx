@@ -7,7 +7,7 @@ import { selectCurrentUser } from '../../store/user/user.selector';
 
 import { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
-import { PaymentButton, PaymentFormContainer, FormContainer } from './payment-form.styles';
+import { PaymentButton, PaymentFormContainer, FormContainer, PaymentFormTitle } from './payment-form.styles';
 
 const PaymentForm = () => {
   const stripe = useStripe();
@@ -58,7 +58,9 @@ const PaymentForm = () => {
   return (
     <PaymentFormContainer>
       <FormContainer onSubmit={paymentHandler}>
-        <h2>Credit Card Payment:</h2>
+        <PaymentFormTitle>
+          Credit Card Payment:
+        </PaymentFormTitle>
         <CardElement />
         <PaymentButton
           buttonType={BUTTON_TYPE_CLASSES.inverted}
