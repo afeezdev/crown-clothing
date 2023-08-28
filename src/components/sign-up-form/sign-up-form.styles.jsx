@@ -6,7 +6,7 @@ export const SignUpContainer = styled.div`
   width: 380px;
 
   @media only screen and (max-width: 800px) {
-    width: 500px;
+    width: 280px;
     margin-top: 80px;
     margin-bottom: 80px;
   }

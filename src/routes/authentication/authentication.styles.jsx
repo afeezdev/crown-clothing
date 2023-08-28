@@ -8,6 +8,7 @@ export const AuthenticationContainer = styled.div`
   margin-top: 100px;
 
   @media only screen and (max-width: 800px) {
+    width: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
