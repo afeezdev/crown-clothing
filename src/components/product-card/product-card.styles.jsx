@@ -41,11 +41,13 @@ export const Footer = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 18px;
+  margin-bottom: 25px;
+
 `;
 
 export const Name = styled.span`
   width: 90%;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 `;
 
 export const Price = styled.span`
