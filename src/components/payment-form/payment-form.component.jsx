@@ -7,7 +7,7 @@ import { selectCurrentUser } from '../../store/user/user.selector';
 
 import { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
-import { PaymentButton, PaymentFormContainer, FormContainer, PaymentFormTitle } from './payment-form.styles';
+import { PaymentButton, PaymentFormContainer, FormContainer, TestWarning, CardContainer } from './payment-form.styles';
 
 const PaymentForm = () => {
   const stripe = useStripe();
@@ -30,7 +30,6 @@ const PaymentForm = () => {
       body: JSON.stringify({ amount: amount * 100 }),
     }).then((res) => {
       return res.json();
-      console.log(response)
     });
 
     const clientSecret = response.paymentIntent.client_secret;
@@ -44,7 +43,7 @@ const PaymentForm = () => {
       },
     });
 
-    setIsProcessingPayment(false);
+setIsProcessingPayment(false);
 
     if (paymentResult.error) {
       alert(paymentResult.error.message);
@@ -53,21 +52,26 @@ const PaymentForm = () => {
         alert('Payment Successful!');
       }
     }
-  };
+   };
 
   return (
     <PaymentFormContainer>
       <FormContainer onSubmit={paymentHandler}>
-        <PaymentFormTitle>
-          Credit Card Payment:
-        </PaymentFormTitle>
-        <CardElement />
+        <h2>Credit Card Payment:</h2>
+        <CardContainer>
+          <CardElement />
+        </CardContainer>
         <PaymentButton
           buttonType={BUTTON_TYPE_CLASSES.inverted}
           isLoading={isProcessingPayment}
         >
           Pay Now
         </PaymentButton>
+        <TestWarning>
+          *Please use the following test credit card for payments*
+        <br />
+          4242 4242 4242 4242 -  Exp: 01/27 -  CVC: 123   ZIP: 12345
+        </TestWarning>
       </FormContainer>
     </PaymentFormContainer>
   );
