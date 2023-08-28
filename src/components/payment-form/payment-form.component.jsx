@@ -18,7 +18,7 @@ const PaymentForm = () => {
 
   const paymentHandler = async (e) => {
     e.preventDefault();
-    if (!stripe || !elements) {
+    if (!stripe || !elements || !amount) {
       return;
     }
     setIsProcessingPayment(true);
@@ -50,6 +50,8 @@ setIsProcessingPayment(false);
     } else {
       if (paymentResult.paymentIntent.status === 'succeeded') {
         alert('Payment Successful!');
+        window.location.reload()
+        window.location.href = "/shop"
       }
     }
    };

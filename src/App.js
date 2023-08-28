@@ -13,9 +13,12 @@ import Authentication from './routes/authentication/authentication.component';
 import Shop from './routes/shop/shop.component';
 import Checkout from './routes/checkout/checkout.component';
 import { setCurrentUser } from './store/user/user.reducer';
+import { selectCurrentUser } from './store/user/user.selector';
 
 const App = () => {
   const dispatch = useDispatch();
+  const currentUser = useSelector(selectCurrentUser);
+
 
   useEffect(() => {
     const unsubscribe = onAuthStateChangedListener((user) => {
@@ -30,12 +33,13 @@ const App = () => {
     return unsubscribe;
   }, []);
 
+  
   return (
     <Routes>
-      <Route path='/' element={<Navigation />}>
-        <Route index element={<Home />} />
+      <Route element={ <Navigation />}>
+        <Route index element={ currentUser ? <Home /> : <Authentication /> } />
         <Route path='shop/*' element={<Shop />} />
-        <Route path='auth' element={<Authentication />} />
+        <Route path='auth' element={currentUser ? <Home /> : <Authentication />} />
         <Route path='checkout' element={<Checkout />} />
       </Route>
     </Routes>

@@ -6,7 +6,9 @@ export const SignUpContainer = styled.div`
   width: 380px;
 
   @media only screen and (max-width: 800px) {
-    width: 250px;
+    width: 500px;
+    margin-top: 80px;
+    margin-bottom: 80px;
   }
 
   h2 {
