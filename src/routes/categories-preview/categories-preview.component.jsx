@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import { useSelector } from 'react-redux';
+import { CategoryPreviewContainer } from './categories-preview.styles';
 
 import { selectCategoriesMap } from '../../store/categories/category.selector';
 
@@ -13,7 +14,9 @@ const CategoriesPreview = () => {
       {Object.keys(categoriesMap).map((title) => {
         const products = categoriesMap[title];
         return (
-          <CategoryPreview key={title} title={title} products={products} />
+          <CategoryPreviewContainer>
+            <CategoryPreview key={title} title={title} products={products} />
+          </CategoryPreviewContainer>
         );
       })}
     </Fragment>
