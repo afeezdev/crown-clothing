@@ -5,10 +5,15 @@ export const CategoryContainer = styled.div`
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
   row-gap: 50px;
+
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const Title = styled.h2`
   font-size: 38px;
   margin-bottom: 25px;
   text-align: center;
+  margin-top: 100px;
 `;
