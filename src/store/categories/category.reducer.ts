@@ -1,6 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice} from '@reduxjs/toolkit';
 
-export const CATEGORIES_INITIAL_STATE = {
+
+
+type CategoriesSliceProps = {
+  categories: [];
+}
+
+type PayloadProps = {
+  payload: [];
+
+}
+
+export const CATEGORIES_INITIAL_STATE: CategoriesSliceProps= {
   categories: [],
 };
 
@@ -8,7 +19,7 @@ export const categoriesSlice = createSlice({
   name: 'categories',
   initialState: CATEGORIES_INITIAL_STATE,
   reducers: {
-    setCategories(state, action) {
+    setCategories(state, action: PayloadProps) {
       state.categories = action.payload;
     },
   },
